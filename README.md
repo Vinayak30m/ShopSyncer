@@ -1,8 +1,8 @@
-# ⚡ ShopSyncer
+# ShopSyncer
 
 ShopSyncer is a backend integration project for Shopify that allows merchants and developers to perform complete CRUD operations on Customers and Orders using the Shopify Admin GraphQL API. It also supports real-time webhook handling for order creation and pushes order data into a queue for background processing using RabbitMQ. MongoDB is used as the primary database for persisting customer and order data.
 
-## 🚀 Features
+## 2. Features
 
 - ✅ **Customer CRUD via Shopify GraphQL API**
 - ✅ **Order CRUD via Shopify GraphQL API**
@@ -15,7 +15,7 @@ ShopSyncer is a backend integration project for Shopify that allows merchants an
 
 ---
 
-## 🧱 Tech Stack
+## 3. Tech Stack
 
 | Layer       | Technology                          |
 |-------------|-------------------------------------|
@@ -28,7 +28,7 @@ ShopSyncer is a backend integration project for Shopify that allows merchants an
 
 ---
 
-## 📦 Folder Structure
+## 4. Folder Structure
 ```
 shopSyncer/
 ├── certs/                 # SSL certificates (not committed)
@@ -55,7 +55,7 @@ shopSyncer/
 
 ---
 
-## 📡 Webhook Flow
+## 5. Webhook Flow
 
 1. Shopify sends an `orders/create` event to `/webhooks/orders/create`.
 2. The webhook is verified using HMAC SHA-256.
@@ -64,7 +64,7 @@ shopSyncer/
 
 ---
 
-## 🔐 Security Practices
+## 6. Security Practices
 
 - `.env` and `certs/` are added to `.gitignore` to prevent accidental leakage.
 - Webhooks are verified using HMAC and the shared `WEBHOOK_SECRET`.
@@ -72,7 +72,7 @@ shopSyncer/
 
 ---
 
-## 🧪 Testing with Postman
+## 7. Testing with Postman
 
 - Use POST requests to test:
   - `/shopify/customer/create`, `/shopify/order/create`, etc.
@@ -81,28 +81,26 @@ shopSyncer/
 
 ---
 
-## 📌 Setup Instructions
+## 8. Setup Instructions
 
-1. Clone the repo:
+### 1. Clone the repo:
    ```bash
    git clone https://github.com/your-username/shopSyncer.git
    cd shopsyncer
-
-## ⚙️ Setup Instructions
-
-### 1. Install dependencies
+```
+### 2. Install dependencies
 
 ```bash
 npm install 
 ```
-### 2. Create .env file
+### 3. Create .env file
 - SHOPIFY_STORE_URL=your-store.myshopify.com
 - SHOPIFY_ACCESS_TOKEN=your-admin-api-token
 - WEBHOOK_SECRET=your-webhook-secret
 
-### 3. Start RabbitMQ locally
+### 4. Start RabbitMQ locally
 
-### 4. Run the consumer and server
+### 5. Run the consumer and server
 ```bash
 node queue/consumer.js
 node index.js
