@@ -31,25 +31,26 @@ ShopSyncer is a backend integration project for Shopify that allows merchants an
 ## 📦 Folder Structure
 
 shopSyncer/
-├── certs/          # SSL certificates (not committed)
-├── graphql/        # GraphQL queries for Customer and Order
-│ ├── customerQueries.js
-│ └── orderQueries.js
+├── certs/                 # SSL certificates (not committed)
+├── graphql/               # GraphQL queries for Customer and Order
+│   ├── customerQueries.js
+│   └── orderQueries.js
 ├── queue/
-│ ├── consumer.js    # Consumes messages from RabbitMQ
+│   └── consumer.js        # Consumes messages from RabbitMQ
 ├── middlewares/
-│ ├── validateOrder.js
-├── modles/
-│ ├── order.js
+│   └── validateOrder.js
+├── models/
+│   └── order.js
 ├── routes/
-│ └── shopify.js     # All CRUD endpoints
+│   └── shopify.js         # All CRUD endpoints
 ├── webhooks/
-│ ├── orderCreateWebhook.js # Webhook for order creation
-├── .env             # Environment variables (not committed)
+│   └── orderCreateWebhook.js  # Webhook for order creation
+├── .env                   # Environment variables (not committed)
 ├── .gitignore
-├── index.js         # Main HTTPS server entry
+├── index.js               # Main HTTPS server entry
 ├── package.json
 └── README.md
+
 
 
 ---
