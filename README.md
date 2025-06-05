@@ -29,7 +29,7 @@ ShopSyncer is a backend integration project for Shopify that allows merchants an
 ---
 
 ## 📦 Folder Structure
-
+```
 shopSyncer/
 ├── certs/                 # SSL certificates (not committed)
 ├── graphql/               # GraphQL queries for Customer and Order
@@ -51,7 +51,7 @@ shopSyncer/
 ├── package.json
 └── README.md
 
-
+```
 
 ---
 
@@ -94,7 +94,7 @@ shopSyncer/
 
 ```bash
 npm install 
-
+```
 ### 2. Create .env file
 - SHOPIFY_STORE_URL=your-store.myshopify.com
 - SHOPIFY_ACCESS_TOKEN=your-admin-api-token
@@ -106,6 +106,6 @@ npm install
 ```bash
 node queue/consumer.js
 node index.js
-
+```
 ✍️ Author
 Vinayak Mishra
