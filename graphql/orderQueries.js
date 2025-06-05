@@ -1,5 +1,4 @@
 module.exports = {
-  // Fetch order by ID
   getOrder: `
     query GetOrder($id: ID!) {
       order(id: $id) {
@@ -39,7 +38,6 @@ module.exports = {
     }
   `,
 
-  // Shopify doesn't support direct order updates; this remains mostly useful for tags/notes
   updateOrder: `
     mutation UpdateOrder($input: OrderInput!) {
       orderUpdate(input: $input) {
@@ -56,8 +54,6 @@ module.exports = {
       }
     }
   `,
-
-  // Close an order
   closeOrder: `
     mutation CloseOrder($id: ID!) {
       orderClose(id: $id) {
@@ -72,8 +68,6 @@ module.exports = {
       }
     }
   `,
-
-  // Cancel an order
   cancelOrder: `
     mutation CancelOrder($id: ID!, $reason: OrderCancelReason!) {
       orderCancel(id: $id, reason: $reason) {
@@ -89,8 +83,6 @@ module.exports = {
       }
     }
   `,
-
-  // Create order via Draft Order
    draftOrderCreate: `
     mutation CreateDraftOrder($input: DraftOrderInput!) {
       draftOrderCreate(input: $input) {
